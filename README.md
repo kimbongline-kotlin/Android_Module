@@ -78,3 +78,20 @@ ex) instaTagView.add(10,10,'태그 제목','태그 내용')
               If(requestCode == CameraValue.RESULT …)	  
          }
 
+# DisplayUtl
+- DP 값을 Pixcel로 혹은 Pixcel값을 DP로 변환하는 툴 입니다.
+
+         Convert.toPixcel(dp,context) -> Float : DP값을 Pixcel로 변환.
+         Convert.toDp(picxel,context) -> Float : Pixce값을 DP로 변환.
+
+# HashKeyTool
+- 구글 Singing 및 ByteArray로 된 값을 HashKey로 변경해야 할 경우 유용하게 사용합니다.
+ 
+         HashKeyTool(byteArray) -> String 값으로 변환됩니다.
+
+# ArraySaved
+- PreferenceManager에 문자 배열을 저장하고 가져오는 툴입니다.
+
+         Ex) 저장
+               ArraySaved.saveItem(context, key,ArrayList<string>) :  key 값에 배열 데이터를 저장하는 함수입니다.
+               ArraySaved.calledItem(context, key, ArrayList<String>) : key 값으로 저장된 배열 데이터를 가져오는 함수입니다.
