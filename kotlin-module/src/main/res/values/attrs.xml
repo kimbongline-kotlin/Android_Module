@@ -1,0 +1,76 @@
+<resources>
+    <attr name="hashTagColor" format="color" />
+    <attr name="hastTagBackground" format="color" />
+    <attr name="atColor" format="color" />
+    <attr name="atBackground" format="color" />
+    <attr name="hashTagSize" format="float" />
+    <attr name="atSize" format="float" />
+    <attr name="trackHashTag" format="boolean" />
+    <attr name="trackAt" format="boolean" />
+    <attr name="boldHashTag" format="boolean" />
+    <attr name="boldAt" format="boolean" />
+    <attr name="italicHashTag" format="boolean" />
+    <attr name="italicAt" format="boolean" />
+    <attr name="underlineHashTag" format="boolean" />
+    <attr name="underlineAt" format="boolean" />
+    <attr name="fontName" format="string" />
+    <attr name="hashTagFont" format="string" />
+    <attr name="atFont" format="string" />
+
+    <declare-styleable name="HorizontalListView">
+        <attr name="dividerWidth" format="dimension" />
+        <attr name="android:divider" />
+        <attr name="android:requiresFadingEdge" />
+        <attr name="android:fadingEdgeLength" />
+    </declare-styleable>
+
+    <declare-styleable name="HashTagView">
+        <attr name="hashTagColor" />
+        <attr name="hastTagBackground" />
+        <attr name="atColor" />
+        <attr name="atBackground" />
+        <attr name="hashTagSize" />
+        <attr name="atSize" />
+        <attr name="trackHashTag" />
+        <attr name="trackAt" />
+        <attr name="boldHashTag" />
+        <attr name="boldAt" />
+        <attr name="italicHashTag" />
+        <attr name="italicAt" />
+        <attr name="underlineHashTag" />
+        <attr name="underlineAt" />
+        <attr name="fontName" />
+        <attr name="hashTagFont" />
+        <attr name="atFont" />
+    </declare-styleable>
+
+    <declare-styleable name="HashTagEditText">
+        <attr name="hashTagColor" />
+        <attr name="hastTagBackground" />
+        <attr name="atColor" />
+        <attr name="atBackground" />
+        <attr name="hashTagSize" />
+        <attr name="atSize" />
+        <attr name="trackHashTag" />
+        <attr name="trackAt" />
+        <attr name="boldHashTag" />
+        <attr name="boldAt" />
+        <attr name="italicHashTag" />
+        <attr name="italicAt" />
+        <attr name="underlineHashTag" />
+        <attr name="underlineAt" />
+        <attr name="fontName" />
+        <attr name="hashTagFont" />
+        <attr name="atFont" />
+    </declare-styleable>
+
+    <declare-styleable name="InstaTag">
+        <attr name="canWeAddTags" format="boolean" />
+        <attr name="overrideDefaultColor" format="color" />
+        <attr name="tagTextColor" format="color" />
+        <attr name="tagBackColor" format="color" />
+        <attr name="hideAnimation" format="reference" />
+        <attr name="showAnimation" format="reference" />
+    </declare-styleable>
+
+</resources>
