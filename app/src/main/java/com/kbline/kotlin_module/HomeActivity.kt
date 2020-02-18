@@ -8,6 +8,7 @@ import android.util.Log
 import com.gun0912.tedpermission.PermissionListener
 import com.gun0912.tedpermission.TedPermission
 import com.kbline.kotlin_module.GalleryUtil.KbPickerActivity
+import com.kbline.kotlin_module.GalleryUtil.KbPickerCall
 import com.kbline.kotlin_module.GalleryUtil.Util.CameraValue
 import kotlinx.android.synthetic.main.activity_home.*
 import java.util.ArrayList
@@ -31,10 +32,8 @@ class HomeActivity : AppCompatActivity() {
                         //CameraValue.MAX_VALUE = 최대 선택 가능한 장수, 5
                         //CameraValue.RESULT = 이미지 리턴 값.
 
-                        startActivityForResult(Intent(applicationContext,KbPickerActivity::class.java)
-                            .putExtra(CameraValue.TYPE,CameraValue.SINGLE)
-                            .putExtra(CameraValue.MAX_VALUE,5)
-                            ,CameraValue.RESULT)
+
+                        KbPickerCall.open(this@HomeActivity,applicationContext,CameraValue.MULTI,10)
 
 
                     }

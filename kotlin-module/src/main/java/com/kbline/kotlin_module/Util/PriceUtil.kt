@@ -4,7 +4,7 @@ import java.text.DecimalFormat
 
 //금액 ###,#
 object PriceUtil {
-    fun set(str: String?): String {
+    fun set(str: String): String {
         if (str.toString() != "") {
             if (str != null) {
                 return if (str.toString() == "-") {
