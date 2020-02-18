@@ -71,4 +71,6 @@ dependencies {
     implementation "org.koin:koin-androidx-viewmodel:1.0.2"
     testImplementation 'org.koin:koin-test:1.0.1'
 
+    implementation 'gun0912.ted:tedpermission:2.1.1'
+
 }

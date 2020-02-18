@@ -30,17 +30,9 @@ abstract class KbActivity<T : ViewDataBinding, R : KbViewModel> : AppCompatActiv
         bindAfter()
 
     }
+    
 
-    open fun getRealPathFromURI(
-        context: Context,
-        contentUri: Uri
-    ): String {
-        val cursor = context.contentResolver
-            .query(contentUri!!, arrayOf("_data"), null, null, null)
-        val column_index = cursor!!.getColumnIndexOrThrow("_data")
-        cursor.moveToFirst()
-        return cursor.getString(column_index)
-    }
+
 
 
 }

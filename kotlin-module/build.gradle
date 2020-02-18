@@ -10,7 +10,8 @@ publish {
     publishVersion = '1.0'          // version
     desc = 'kimboneline-kotlin-module'       // description
     website = 'https://github.com/kimbongline-kotlin/kotlin_module'                    // website
-    issueTracker = "https://github.com/kimbongline-kotlin/kotlin_module/issues"    // git issue tracker
+    issueTracker = "https://github.com/kimbongline-kotlin/kotlin_module/issues"
+    // git issue tracker
     repository = "https://github.com/kimbongline-kotlin/kotlin_module.git"         // git repo
 }
 
@@ -107,10 +108,12 @@ dependencies {
     implementation "com.jakewharton.rxbinding2:rxbinding-appcompat-v7-kotlin:2.0.0"
 
 
-
     implementation "org.koin:koin-androidx-scope:1.0.2"
     implementation "org.koin:koin-androidx-viewmodel:1.0.2"
     testImplementation 'org.koin:koin-test:1.0.1'
+    implementation 'com.naver.android.helloyako:imagecropview:1.2.2'
+    implementation 'androidx.percentlayout:percentlayout:1.0.0'
+    implementation 'gun0912.ted:tedpermission:2.1.1'
 
 
 }

@@ -1,6 +1,8 @@
 package com.kbline.kotlin_module.Util
 
+import android.content.Context
 import android.graphics.Bitmap
+import android.net.Uri
 import android.widget.ImageView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.DecodeFormat
@@ -50,4 +52,14 @@ object KbImage {
             .thumbnail(0.5f).into(imageView)
     }
 
+    fun getRealPathFromURI(
+        context: Context,
+        contentUri: Uri
+    ): String {
+        val cursor = context.contentResolver
+            .query(contentUri!!, arrayOf("_data"), null, null, null)
+        val column_index = cursor!!.getColumnIndexOrThrow("_data")
+        cursor.moveToFirst()
+        return cursor.getString(column_index)
+    }
 }

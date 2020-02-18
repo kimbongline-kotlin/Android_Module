@@ -1,2 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="bsc2086.kotlin_module" />
+    package="bsc2086.kotlin_module">
+
+    <application>
+        <activity android:name="com.kbline.kotlin_module.GalleryUtil.KbPickerActivity"></activity>
+    </application>
+
+</manifest>

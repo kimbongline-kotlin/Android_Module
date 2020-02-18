@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/fragment_camera_0" android:background="@color/whiteColor"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/camera_preview_view">
+
+        <Button
+            android:id="@+id/captureIcon"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerInParent="true"
+            android:text="캡처" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/topLayer" android:layout_width="match_parent" android:layout_height="55dp">
+        <TextView android:textSize="18sp" android:textColor="@color/titleColor" android:id="@+id/textView43" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="사진 촬영" android:layout_centerInParent="true"/>
+        <TextView android:textSize="15sp"  android:gravity="center" android:id="@+id/backBtn" android:paddingLeft="15dp" android:paddingRight="15dp" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="취소"/>
+        <View android:id="@+id/view13"  android:layout_width="match_parent" android:layout_height="1dp" android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+    <com.kbline.kotlin_module.GalleryUtil.Util.SquareCameraPreview android:id="@+id/camera_preview_view" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/topLayer"/>
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent" android:layout_alignTop="@+id/camera_preview_view" android:layout_alignBottom="@+id/camera_preview_view">
+
+        <Button
+            android:id="@+id/rotationIcon"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="15dp"
+            android:text="Front"
+            android:textSize="13sp" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,11 +1,9 @@
-package com.kbline.kotlin_module
+package com.kbline.kotlin_module.InstagramTag
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import android.view.MotionEvent
 import android.widget.Toast
-import com.kbline.kotlin_module.InstagramTagItem.InstaTag
+import com.kbline.kotlin_module.R
 import com.kbline.kotlin_module.Util.KbImage
 import kotlinx.android.synthetic.main.activity_main.*
 
