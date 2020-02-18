@@ -36,3 +36,17 @@ ex) instaTagView.add(10,10,'태그 제목','태그 내용')
  * 하나의 이미지에 여러개의 태그르 추가 가능하도로 업데이트 할 예정입니다.
 
 # HashTagView, HashTagEdit
+-해시 태그의 색상 및 at, 등 다양한 옵션들의 색상을 적용해주는 EditText, TextView입니다.
+
+  Attribute
+- hashTagColor : 해시 태그의 글자색을 지정합니다.
+- hashTagBackground : 해시 태그의 배경색을 지정합니다.
+- atColor : @의 색상을 지정합니다.
+- atBackground : @의 배경색을 지정합니다.
+- hashTagSize : HashTag의 크기를 지정합니다.
+- atSize : @의 크기를 지정합니다.
+
+1. HashTagView : EditText에 입력과 동시에 해시태그, @, _ 등 다양한 커스텀이 가능합니다.
+2. HashTagEdit : EditText에 입력과 동시에 해시태그, @, _ 등 다양한 커스텀이 가능합니다.
+3. R.id.XX.hashTags : 해시태그의 개수를 List<String>으로 반환합니다.
+4. R.id.XX.ats : @의 개수를 List<String>으로 반환합니다.
