@@ -6,6 +6,7 @@ import org.json.JSONArray
 import org.json.JSONException
 import java.util.*
 
+//기기내 문자 배열 저장.
 object ArraySaved  {
 
     fun saveItem(

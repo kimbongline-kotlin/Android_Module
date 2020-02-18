@@ -5,6 +5,7 @@ import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ItemDecoration
 
+//행,열 간격.
 class SpacesItemDecoration(private val space: Int, private val row: Int) : ItemDecoration() {
     override fun getItemOffsets(
         outRect: Rect,

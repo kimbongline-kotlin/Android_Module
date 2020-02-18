@@ -26,6 +26,11 @@ class HomeActivity : AppCompatActivity() {
                 .setPermissionListener(object: PermissionListener {
                     override fun onPermissionGranted() {
 
+
+                        //CameraValue.TYPE = 0 : 한장, 1 여러장 선택
+                        //CameraValue.MAX_VALUE = 최대 선택 가능한 장수, 5
+                        //CameraValue.RESULT = 이미지 리턴 값.
+
                         startActivityForResult(Intent(applicationContext,KbPickerActivity::class.java)
                             .putExtra(CameraValue.TYPE,CameraValue.SINGLE)
                             .putExtra(CameraValue.MAX_VALUE,5)
@@ -40,8 +45,12 @@ class HomeActivity : AppCompatActivity() {
 
 
                 })
-                .setPermissions(android.Manifest.permission.WRITE_EXTERNAL_STORAGE,android.Manifest.permission.CAMERA) // 확인할 권한을 다중 인자로 넣어줍니다.
+                .setPermissions(android.Manifest.permission.WRITE_EXTERNAL_STORAGE,android.Manifest.permission.CAMERA)
                 .check()
+        }
+
+        HashBtn.setOnClickListener {
+            startActivity(Intent(applicationContext,HashTagActivity::class.java))
         }
 
     }

@@ -2,6 +2,8 @@ package com.kbline.kotlin_module.Util
 
 import android.content.Context
 
+
+//app Install Check
 object InstallCheck {
 
     fun PackageName(

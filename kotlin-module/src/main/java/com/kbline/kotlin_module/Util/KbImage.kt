@@ -14,14 +14,18 @@ import com.bumptech.glide.request.RequestOptions
 
 object KbImage {
 
+
+    //gifImage
     fun gifimage(url: Any, imageView: ImageView) {
         Glide.with(imageView.context).load(url).apply(
             RequestOptions().format(DecodeFormat.PREFER_RGB_565).centerCrop().diskCacheStrategy(
                 DiskCacheStrategy.ALL
             )
         ).into(imageView)
+
     }
 
+    //Image
     fun image(url: Any, imageView: ImageView) {
         Glide.with(imageView.context).load(url).apply(
             RequestOptions().format(DecodeFormat.PREFER_RGB_565).centerCrop().diskCacheStrategy(
@@ -30,6 +34,7 @@ object KbImage {
         ).thumbnail(0.5f).into(imageView)
     }
 
+    //둥근 모서리 Image
     fun cornerImage(
         url: Any,
         corner: Int,
@@ -45,6 +50,7 @@ object KbImage {
             .apply(requestOptions).into(imageView)
     }
 
+    //원형 Image
     fun circleImage(url: Any, imageView: ImageView) {
         val requestOptions_circle = RequestOptions().optionalCircleCrop()
         requestOptions_circle.diskCacheStrategy(DiskCacheStrategy.ALL)
@@ -52,6 +58,8 @@ object KbImage {
             .thumbnail(0.5f).into(imageView)
     }
 
+
+    //이미지 실제주소
     fun getRealPathFromURI(
         context: Context,
         contentUri: Uri

@@ -15,6 +15,7 @@ class TagActivity : AppCompatActivity() {
 
         KbImage.image("https://cdn.getyourguide.com/img/tour_img-2422815-146.jpg",instaTagView.tagImageView)
 
+        //태그추가
         addTagBtn.setOnClickListener {
             if(tagTitleEdit.text.toString().isEmpty()) {
                 Toast.makeText(applicationContext,"태그 제목을 입력해주세요.",Toast.LENGTH_SHORT).show()
@@ -24,6 +25,7 @@ class TagActivity : AppCompatActivity() {
 
         }
 
+        //태그 정보 가져오기
         tagInfoBtn.setOnClickListener {
             if(instaTagView.listOfTagsToBeTagged.size > 0) {
                 var title = instaTagView.listOfTagsToBeTagged.get(0).title
