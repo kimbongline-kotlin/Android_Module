@@ -7,7 +7,7 @@
 3. KbImage : Glide 라이브러리를 이용한 서버이미지 로드 최적화 뷰.
 4. KbPickerActivity : Gallery, Camera 통합 뷰.
 5. DisplayUtil : DP to Pixcel 혹은 Pixcel to DP 변화 툴.
-6. HashKeyTool : 구글 스토어 Sigining 업로드 시 주어지느 Byte 키 값 HashKey로 변경.
+6. HashKeyTool : 구글 스토어 Sigining 업로드 시 주어지는 ByteArray 키 값 HashKey로 변경.
 7. ArraySaved : PreferenceManager 에 문자 배열 저장 및 가져오는 툴. 
 8. ColorHex : #000000 과 같은 Hex값을 int 값 으로 변경해주는 툴.
 9. InstallCheck : 외부 앱 설치 유무 확인 해주는 툴.
@@ -33,4 +33,6 @@ ex) instaTagView.add(10,10,'태그 제목','태그 내용')
  - 태그 제목 : instaTagView.listOfTagsTobeTagged.get(0).title
  - 태그 내용 : instaTagView.listOfTagsTobeTagged.get(0).info
  
- * 하나의 이미징 여러개의 태그르 추가 가능하도로 업데이트 할 예정입니다.
+ * 하나의 이미지에 여러개의 태그르 추가 가능하도로 업데이트 할 예정입니다.
+
+# HashTagView, HashTagEdit
