@@ -13,3 +13,22 @@
 9. InstallCheck : 외부 앱 설치 유무 확인 해주는 툴.
 10. PriceUtil : 금액 및 숫자 표시지 천단위 , 붙여주는 툴.
 11. ValidCheck : 이메일 및 비밀번호 패턴 유효성 검사.
+12. KbActivity, KbViewModel : MVVM 패턴 사용시 유용학 사용되는 툴.
+
+#InstaTagView
+- 인스타그램 사진업로드시 사람 혹은 장소르 태그 할때 이미지의 원하는 위치에 태그를 붙이는 기능입니다.
+- 디바이스 기기별 x,y 좌푯값이 저장되며, 태그내용 뿐만아니라 weburl, imageurl 등 다양한 정보를 추가로 저장 가능합니다.
+
+1. Xml에 XXX.kotlin_module.InstagramTagItem.InstaTag 추가.
+2. InstaTag의 ImageView.영역은 parent.tagImageView 입니다.
+ex) R.id.instaTagView 라는 InstaTag 뷰가 존재하면 Kotlin에서는 instaTagView.tagImageView 로 ImageView 영역만 불러옰 있습니다.
+3. Tag 추가 하기 
+ : .add(x : 초기 x 좌푯값 ,y : 초기 y 좌푯값 ,title : 태그에 보여지는 내용. ,info : 태그에 보여지지 않지만 추가되는 내용.) 
+ex) instaTagView.add(10,10,'태그 제목','태그 내용')
+4. 추가된 Tag 데이터 불러오기
+ - x 좌표 : instaTagView.listOfTagsTobeTagged.get(0).x_co_ord
+ - y 좌표 : instaTagView.listOfTagsTobeTagged.get(0).y_co_ord
+ - 태그 제목 : instaTagView.listOfTagsTobeTagged.get(0).title
+ - 태그 내용 : instaTagView.listOfTagsTobeTagged.get(0).info
+ 
+ * 하나의 이미징 여러개의 태그르 추가 가능하도로 업데이트 할 예정입니다.
