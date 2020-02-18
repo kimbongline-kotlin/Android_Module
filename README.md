@@ -28,10 +28,10 @@ ex) R.id.instaTagView 라는 InstaTag 뷰가 존재하면 Kotlin에서는 instaT
  : .add(x : 초기 x 좌푯값 ,y : 초기 y 좌푯값 ,title : 태그에 보여지는 내용. ,info : 태그에 보여지지 않지만 추가되는 내용.) 
 ex) instaTagView.add(10,10,'태그 제목','태그 내용')
 4. 추가된 Tag 데이터 불러오기
- - x 좌표 : instaTagView.listOfTagsTobeTagged.get(0).x_co_ord
- - y 좌표 : instaTagView.listOfTagsTobeTagged.get(0).y_co_ord
- - 태그 제목 : instaTagView.listOfTagsTobeTagged.get(0).title
- - 태그 내용 : instaTagView.listOfTagsTobeTagged.get(0).info
+       - x 좌표 : instaTagView.listOfTagsTobeTagged.get(0).x_co_ord
+       - y 좌표 : instaTagView.listOfTagsTobeTagged.get(0).y_co_ord
+       - 태그 제목 : instaTagView.listOfTagsTobeTagged.get(0).title
+       - 태그 내용 : instaTagView.listOfTagsTobeTagged.get(0).info
  
  업데이트 사항 : 하나의 이미지에 여러개의 태그르 추가 가능하도로 업데이트 할 예정입니다.
 
@@ -55,10 +55,10 @@ ex) instaTagView.add(10,10,'태그 제목','태그 내용')
 - 김봉라인 외주 프로젝트를 진행하며 Glide라이브러리를 이용한 이미지 최적화 로딩툴입니다.
 - Url 에는 내장 이미지(R.drwable.xx), url 이미지 모두 사용가능합니다. 
 
-1. KbImage.gifimage(url, ImageView) : GIF이미지 로딩. 
-2. KbImage.image(url, ImageView) : 일반 이미지 로딩.
-3. KbImage.cornerImage(url, corner_radius,ImageView ) : 둥근 모서리 이미지 로딩. (corner_radius : Int값 모서리 둥근 정도.)
-4. KbImage.circleImage(url,ImageView) : 원형 이미지 로딩.
+    1. KbImage.gifimage(url, ImageView) : GIF이미지 로딩. 
+    2. KbImage.image(url, ImageView) : 일반 이미지 로딩.
+    3. KbImage.cornerImage(url, corner_radius,ImageView ) : 둥근 모서리 이미지 로딩. (corner_radius : Int값 모서리 둥근 정도.)
+    4. KbImage.circleImage(url,ImageView) : 원형 이미지 로딩.
 
 # KbPickerActivity 
 - 갤러리, 카메라가 결합된 액티비티입니다. 내장 이미지 혹은 촬영을 통해 이미지를 저장할 수 있습니다.
