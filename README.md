@@ -33,12 +33,13 @@ ex) instaTagView.add(10,10,'태그 제목','태그 내용')
  - 태그 제목 : instaTagView.listOfTagsTobeTagged.get(0).title
  - 태그 내용 : instaTagView.listOfTagsTobeTagged.get(0).info
  
- * 하나의 이미지에 여러개의 태그르 추가 가능하도로 업데이트 할 예정입니다.
+ 업데이트 사항 : 하나의 이미지에 여러개의 태그르 추가 가능하도로 업데이트 할 예정입니다.
 
 # HashTagView, HashTagEdit
 -해시 태그의 색상 및 at, 등 다양한 옵션들의 색상을 적용해주는 EditText, TextView입니다.
 
-  Attribute
+       Attribute
+
 - hashTagColor : 해시 태그의 글자색을 지정합니다.
 - hashTagBackground : 해시 태그의 배경색을 지정합니다.
 - atColor : @의 색상을 지정합니다.
@@ -50,3 +51,27 @@ ex) instaTagView.add(10,10,'태그 제목','태그 내용')
 2. HashTagEdit : EditText에 입력과 동시에 해시태그, @, _ 등 다양한 커스텀이 가능합니다.
 3. R.id.XX.hashTags : 해시태그의 개수를 List<String>으로 반환합니다.
 4. R.id.XX.ats : @의 개수를 List<String>으로 반환합니다.
+
+# KbImage
+- 김봉라인 외주 프로젝트를 진행하며 Glide라이브러리를 이용한 이미지 최적화 로딩툴입니다.
+- Url 에는 내장 이미지(R.drwable.xx), url 이미지 모두 사용가능합니다. 
+
+1. KbImage.gifimage(url, ImageView) : GIF이미지 로딩. 
+2. KbImage.image(url, ImageView) : 일반 이미지 로딩.
+3. KbImage.cornerImage(url, corner_radius,ImageView ) : 둥근 모서리 이미지 로딩. (corner_radius : Int값 모서리 둥근 정도.)
+4. KbImage.circleImage(url,ImageView) : 원형 이미지 로딩.
+
+# KbPickerActivity 
+- 갤러리, 카메라가 결합된 액티비티입니다. 내장 이미지 혹은 촬영을 통해 이미지를 저장할 수 있습니다.
+- 권한 설정은 박상권님의 TedPermission을 이용하였습니다. (https://github.com/ParkSangGwon/TedPermission)
+
+1. CameraValue.TYPE : 이미지 한장 혹은 여러장을 선택합니다. (Type-SINGLE : 한장,MULTI : 여러장)
+2. CameraValue.MAX_VALUE : 여러장 이미지 선택시 최대 갯수를 선택합니다. (기본값 1)
+3. CameraValue.RESULT : onActivityResult에서 Call 하기 위한 값입니다.
+
+Ex) KbPickerCall.open(this@HomeActivity,applicationContext,CameraValue.MULTI,10) : 여러장 이미지 선택(기본), 최대 10장 선택)
+
+onActivityResult(…) {
+  if(requestCode == CameraValue.RESULT …)	  
+}
+
