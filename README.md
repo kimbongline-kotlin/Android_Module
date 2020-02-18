@@ -71,7 +71,7 @@ ex) instaTagView.add(10,10,'태그 제목','태그 내용')
 2. CameraValue.MAX_VALUE : 여러장 이미지 선택시 최대 갯수를 선택합니다. (기본값 1)
 3. CameraValue.RESULT : onActivityResult에서 Call 하기 위한 값입니다.
 
-         Ex) KbPickerCall.open(this@HomeActivity,applicationContext,CameraValue.MULTI,10) 
+         KbPickerCall.open(this@HomeActivity,applicationContext,CameraValue.MULTI,10) 
          : 여러장 이미지 선택(기본), 최대 10장 선택)
 
          onActivityResult(…) {
@@ -92,6 +92,27 @@ ex) instaTagView.add(10,10,'태그 제목','태그 내용')
 # ArraySaved
 - PreferenceManager에 문자 배열을 저장하고 가져오는 툴입니다.
 
-         Ex) 저장
-               ArraySaved.saveItem(context, key,ArrayList<string>) :  key 값에 배열 데이터를 저장하는 함수입니다.
-               ArraySaved.calledItem(context, key, ArrayList<String>) : key 값으로 저장된 배열 데이터를 가져오는 함수입니다.
+         ArraySaved.saveItem(context, key,ArrayList<string>) :  key 값에 배열 데이터를 저장하는 함수입니다.
+         ArraySaved.calledItem(context, key, ArrayList<String>) : key 값으로 저장된 배열 데이터를 가져오는 함수입니다.
+
+# ColorHex
+- Hex로된 컬러 값을 int로 변경하여 쉽게 사용하게 도와줍니다.
+
+         ColorHex.set(“#ffffff”)
+
+# InstallCheck
+- 디바이스에 설치된 앱을 판단해 줍니다.
+
+         InstallCheck.PackageName(context, com.xx.xxx) : true -> 설치됨, false -> 설치되어있지 않음.
+
+# PriceUtil
+- 금액 및 숫자 표시 시에 천단위 , 를 찍어주는 툴입니다.
+
+        PriceUtil.set(string) -> String
+        PriceUtil.set(“100000”) -> 10,000
+
+# ValidCheck
+- 이메일 및 비밀번호 패턴의 유효성을 검사해주는 툴입니다.
+
+        ValidCheck.email(email : String) -> True or False
+        ValidCheck.passpattern(password : String, pattern : String) -> True or False
