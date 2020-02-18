@@ -15,7 +15,9 @@
 11. ValidCheck : 이메일 및 비밀번호 패턴 유효성 검사.
 12. KbActivity, KbViewModel : MVVM 패턴 사용시 유용학 사용되는 툴.
 
-#InstaTagView
+
+
+# InstaTagView
 - 인스타그램 사진업로드시 사람 혹은 장소르 태그 할때 이미지의 원하는 위치에 태그를 붙이는 기능입니다.
 - 디바이스 기기별 x,y 좌푯값이 저장되며, 태그내용 뿐만아니라 weburl, imageurl 등 다양한 정보를 추가로 저장 가능합니다.
 
