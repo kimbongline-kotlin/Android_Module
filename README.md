@@ -39,7 +39,6 @@ ex) instaTagView.add(10,10,'태그 제목','태그 내용')
 -해시 태그의 색상 및 at, 등 다양한 옵션들의 색상을 적용해주는 EditText, TextView입니다.
 
        Attribute
-
 - hashTagColor : 해시 태그의 글자색을 지정합니다.
 - hashTagBackground : 해시 태그의 배경색을 지정합니다.
 - atColor : @의 색상을 지정합니다.
@@ -69,7 +68,8 @@ ex) instaTagView.add(10,10,'태그 제목','태그 내용')
 2. CameraValue.MAX_VALUE : 여러장 이미지 선택시 최대 갯수를 선택합니다. (기본값 1)
 3. CameraValue.RESULT : onActivityResult에서 Call 하기 위한 값입니다.
 
-Ex) KbPickerCall.open(this@HomeActivity,applicationContext,CameraValue.MULTI,10) : 여러장 이미지 선택(기본), 최대 10장 선택)
+  Ex) KbPickerCall.open(this@HomeActivity,applicationContext,CameraValue.MULTI,10) 
+  : 여러장 이미지 선택(기본), 최대 10장 선택)
 
 onActivityResult(…) {
   if(requestCode == CameraValue.RESULT …)	  
