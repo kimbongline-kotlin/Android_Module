@@ -6,6 +6,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
+import io.reactivex.disposables.CompositeDisposable
 
 
 //MVVM Activity
@@ -18,7 +19,7 @@ abstract class KbActivity<T : ViewDataBinding, R : KbViewModel> : AppCompatActiv
     abstract fun viewStart()
     abstract fun bindStart()
     abstract fun bindAfter()
-
+    val dis = CompositeDisposable()
 
 
     override fun onCreate(paramBundle: Bundle?) {
@@ -32,8 +33,14 @@ abstract class KbActivity<T : ViewDataBinding, R : KbViewModel> : AppCompatActiv
         bindAfter()
 
     }
-    
 
+
+    override fun onStop() {
+        super.onStop()
+        if(isFinishing) {
+            dis.clear()
+        }
+    }
 
 
 

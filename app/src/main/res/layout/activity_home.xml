@@ -17,6 +17,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <Button
+            android:id="@+id/tagBtn"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginBottom="15dp"
@@ -35,5 +36,25 @@
             android:layout_height="50dp"
             android:layout_marginBottom="15dp"
             android:text="해시태그 뷰" />
+
+        <Button
+            android:id="@+id/dynamicBtn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="15dp"
+            android:text="Firebase DynamicLink" />
+
+        <TextView
+            android:id="@+id/dynamic_return_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/mvvmBtn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="15dp"
+            android:text="MVVM-Retofit-Rx 예제" />
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
