@@ -17,6 +17,9 @@
 13. InstallCheck : 외부 앱 설치 유무 확인 해주는 툴.
 14. PriceUtil : 금액 및 숫자 표시지 천단위 , 붙여주는 툴.
 15. ValidCheck : 이메일 및 비밀번호 패턴 유효성 검사.
+16. DateUtil : Date 형식에 맞추어 날짜로 변환 및 계산해주는 툴입니다.
+17. ClipboardUtil : 클립보드에 저장하는 간단한 툴입니다.
+18. Uuid : 디바이스의 고유값을 가져오는 간단한 툴입니다.
 16. KbActivity, KbViewModel : MVVM 패턴 사용시 유용학 사용되는 툴.
 
 
@@ -135,12 +138,12 @@ ex) instaTagView.add(10,10,'태그 제목','태그 내용')
     			}
                }
 
-# 6.MVVM, Retrofit2, Rx를 이용한 간단한 예제입니다.
+# 6. MVVM, Retrofit2, Rx를 이용한 간단한 예제입니다.
 
-# 7.GoogleAPI와 SmartLocation 라이브러리를 이용한 간단한 네비게이션 예제입니다.
- Ex) https://github.com/mrmans0n/smart-location-lib
+# 7. GoogleAPI와 SmartLocation 라이브러리를 이용한 간단한 네비게이션 예제입니다.
+    Ex) https://github.com/mrmans0n/smart-location-lib
 
-# 8.Firebase를 이용한 실시간 채팅 예제입니다. 
+# 8. Firebase를 이용한 실시간 채팅 예제입니다. 
 
              
 # 9.DisplayUtl
@@ -152,7 +155,8 @@ ex) instaTagView.add(10,10,'태그 제목','태그 내용')
 # 10.HashKeyTool
 - 구글 Singing 및 ByteArray로 된 값을 HashKey로 변경해야 할 경우 유용하게 사용합니다.
  
-         HashKeyTool(byteArray) -> String 값으로 변환됩니다.
+          HashKeyTool(byteArray) -> String 값으로 변환됩니다.
+          HashKeyTool.printHashKey() : 카카오, 페이스북 등의 API를 연동시 Debug HashKey를 변환해줍니다.
 
 # 11.ArraySaved
 - PreferenceManager에 문자 배열을 저장하고 가져오는 툴입니다.
@@ -181,3 +185,20 @@ ex) instaTagView.add(10,10,'태그 제목','태그 내용')
 
          ValidCheck.email(email : String) -> True or False
          ValidCheck.passpattern(password : String, pattern : String) -> True or False
+
+# 16.DateUtil
+- Date 형식에 맞추어 날짜로 변환 및 계산해주는 툴입니다.
+         
+         DateUtil.convertData()  ex) 오전 02시 : 30분
+         DateUtil.converDateMonth() ex) 02월 20일
+         DateUtil.compareToDate(date1, date2) -> Int : 날짜의 차이를 계산해주는 툴입니다.
+
+# 17. ClipboardUtil
+- 클립보드에 원하는 내용을 복사해주는 툴입니다.
+	 
+         ClipboardUtil.copy(context, text, toast)
+
+# 18.Uuid 
+- 디바이스의 고유 Id를 가져오는 툴입니다. 
+
+         Uuid.get(context) -> String : 디바이스의 고유 Id를 가져옵니다.
