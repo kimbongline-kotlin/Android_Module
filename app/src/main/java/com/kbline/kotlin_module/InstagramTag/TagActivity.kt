@@ -32,6 +32,8 @@ class TagActivity : AppCompatActivity() {
                 var info = instaTagView.listOfTagsToBeTagged.get(0).info
                 var x_loc = instaTagView.listOfTagsToBeTagged.get(0).x_co_ord
                 var y_loc = instaTagView.listOfTagsToBeTagged.get(0).y_co_ord
+
+                Toast.makeText(applicationContext,"태그 제목 : ${title}\n태그 정보 : ${info}\nX_좌푯값 : ${x_loc}\nY_좌푯값 : ${y_loc}",Toast.LENGTH_LONG).show()
             }else {
                 Toast.makeText(applicationContext,"등록된 태그가 없습니다.",Toast.LENGTH_SHORT).show()
             }
