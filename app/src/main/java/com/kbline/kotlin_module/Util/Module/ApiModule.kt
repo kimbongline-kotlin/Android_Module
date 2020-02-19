@@ -1,9 +1,10 @@
-package com.kbline.kotlin_module.MVVM.Module
+package com.kbline.kotlin_module.Util.Module
 
 import com.kbline.kotlin_module.MVVM.Adapter.TrendAdapter
 import com.kbline.kotlin_module.MVVM.ApiUtil.ApiService
 import com.kbline.kotlin_module.MVVM.ViewModel.GiphyViewModel
 import com.kbline.kotlin_module.NavigationFolder.NavigationViewModel
+import com.kbline.kotlin_module.RealTimeChat.Model.RealChatViewModel
 
 import com.kimbongline.giphy.Util.ApiFolder.DataModel
 import com.kimbongline.giphy.Util.ApiFolder.DataModelImpl
@@ -52,10 +53,17 @@ var navigationViewModel = module {
     }
 }
 
+var chatViewModel = module {
+    viewModel {
+        RealChatViewModel()
+    }
+}
+
 var apiModule = listOf(
     retrofit,
     trendAdapter,
     model,
     giphyViewModel,
-    navigationViewModel
+    navigationViewModel,
+    chatViewModel
 )

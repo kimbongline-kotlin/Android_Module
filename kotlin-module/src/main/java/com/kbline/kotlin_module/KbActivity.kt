@@ -24,7 +24,7 @@ abstract class KbActivity<T : ViewDataBinding, R : KbViewModel> : AppCompatActiv
 
     override fun onCreate(paramBundle: Bundle?) {
         super.onCreate(paramBundle)
-        supportActionBar!!.hide()
+    //    supportActionBar!!.hide()
 
         viewDataBinding = DataBindingUtil.setContentView(this,reId)
 

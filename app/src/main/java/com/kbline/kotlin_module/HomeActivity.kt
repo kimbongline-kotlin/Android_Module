@@ -17,7 +17,9 @@ import com.kbline.kotlin_module.HashKeyUtil.HashKeyTool
 import com.kbline.kotlin_module.InstagramTag.TagActivity
 import com.kbline.kotlin_module.MVVM.GiphyActivity
 import com.kbline.kotlin_module.NavigationFolder.NavigationActivity
+import com.kbline.kotlin_module.RealTimeChat.RealChatActivity
 import com.kbline.kotlin_module.Util.ClipboardUtil
+import com.kbline.kotlin_module.Util.Uuid
 import kotlinx.android.synthetic.main.activity_dynamic.*
 import kotlinx.android.synthetic.main.activity_home.*
 import java.util.ArrayList
@@ -93,12 +95,37 @@ class HomeActivity : AppCompatActivity() {
 
         }
 
+        chatBtn.setOnClickListener {
+
+            TedPermission.with(this)
+                .setPermissionListener(object: PermissionListener {
+                    override fun onPermissionGranted() {
+
+                        startActivity(Intent(applicationContext,RealChatActivity::class.java))
+
+                    }
+
+                    override fun onPermissionDenied(deniedPermissions: ArrayList<String>?) {
+                       // ShowToast(resources.getString(com.raphacall.user.R.string.phonePermitErrorStr))
+                    }
+
+
+                })
+                .setPermissions(android.Manifest.permission.READ_PHONE_STATE) // 확인할 권한을 다중 인자로 넣어줍니다.
+                .check()
+
+
+
+        }
+
         if(intent.action == Intent.ACTION_VIEW) {
             check_dynamic_link()
         }
 
 
         HashKeyTool.printHashKey(applicationContext)
+
+
 
     }
 

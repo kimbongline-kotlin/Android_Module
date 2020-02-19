@@ -5,4 +5,7 @@
     <color name="colorAccent">#000000</color>
     <color name="whiteColor">#ffffff</color>
     <color name="heartColor">#FF5555</color>
+    <color name="grayColor">#dddddd</color>
+    <color name="hintColor">#999999</color>
+
 </resources>

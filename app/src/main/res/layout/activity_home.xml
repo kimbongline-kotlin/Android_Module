@@ -63,5 +63,12 @@
             android:layout_marginBottom="15dp"
             android:text="Google API를 이용한 네비게이션" />
 
+        <Button
+            android:id="@+id/chatBtn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="15dp"
+            android:text="Firebase를 이용한 실시간 채팅" />
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
