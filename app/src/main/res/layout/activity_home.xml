@@ -56,5 +56,12 @@
             android:layout_marginBottom="15dp"
             android:text="MVVM-Retofit-Rx 예제" />
 
+        <Button
+            android:id="@+id/naviBtn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="15dp"
+            android:text="Google API를 이용한 네비게이션" />
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

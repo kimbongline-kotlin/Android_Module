@@ -30,7 +30,7 @@ class GiphyActivity : KbActivity<ActivityGiphyBinding,GiphyViewModel>() {
 
 
     override fun viewStart() {
-        Log.d("object","hihi")
+
         recycler.run {
             adapter = trendAdapter
             var manager = SpannedGridLayoutManager(SpannedGridLayoutManager.Orientation.VERTICAL, 3)
@@ -60,7 +60,7 @@ class GiphyActivity : KbActivity<ActivityGiphyBinding,GiphyViewModel>() {
 
 
     override fun bindAfter() {
-        var api_key = resources.getString(R.string.api_key)
+        var api_key = resources.getString(R.string.gphy_api)
         viewModel.getData(api_key)
 
         dis.add(RxTextView.textChanges(keywordEdit)

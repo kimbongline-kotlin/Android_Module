@@ -2,6 +2,7 @@ package com.kbline.kotlin_module
 
 import android.app.Activity
 import android.content.Intent
+import android.location.Location
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -12,8 +13,10 @@ import com.kbline.kotlin_module.FirebaseDynamic.DynamicActivity
 import com.kbline.kotlin_module.GalleryUtil.KbPickerActivity
 import com.kbline.kotlin_module.GalleryUtil.KbPickerCall
 import com.kbline.kotlin_module.GalleryUtil.Util.CameraValue
+import com.kbline.kotlin_module.HashKeyUtil.HashKeyTool
 import com.kbline.kotlin_module.InstagramTag.TagActivity
 import com.kbline.kotlin_module.MVVM.GiphyActivity
+import com.kbline.kotlin_module.NavigationFolder.NavigationActivity
 import com.kbline.kotlin_module.Util.ClipboardUtil
 import kotlinx.android.synthetic.main.activity_dynamic.*
 import kotlinx.android.synthetic.main.activity_home.*
@@ -70,10 +73,32 @@ class HomeActivity : AppCompatActivity() {
         }
 
 
+        naviBtn.setOnClickListener {
+
+            TedPermission.with(applicationContext)
+                .setPermissionListener(object: PermissionListener {
+                    override fun onPermissionGranted() {
+
+                        startActivity(Intent(applicationContext,NavigationActivity::class.java))
+                    }
+
+                    override fun onPermissionDenied(deniedPermissions: ArrayList<String>?) {
+
+                    }
+
+
+                })
+                .setPermissions(android.Manifest.permission.ACCESS_FINE_LOCATION)
+                .check()
+
+        }
+
         if(intent.action == Intent.ACTION_VIEW) {
             check_dynamic_link()
         }
 
+
+        HashKeyTool.printHashKey(applicationContext)
 
     }
 

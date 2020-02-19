@@ -3,6 +3,7 @@ package com.kbline.kotlin_module.MVVM.Module
 import com.kbline.kotlin_module.MVVM.Adapter.TrendAdapter
 import com.kbline.kotlin_module.MVVM.ApiUtil.ApiService
 import com.kbline.kotlin_module.MVVM.ViewModel.GiphyViewModel
+import com.kbline.kotlin_module.NavigationFolder.NavigationViewModel
 
 import com.kimbongline.giphy.Util.ApiFolder.DataModel
 import com.kimbongline.giphy.Util.ApiFolder.DataModelImpl
@@ -45,10 +46,16 @@ var giphyViewModel = module {
     }
 }
 
+var navigationViewModel = module {
+    viewModel {
+        NavigationViewModel()
+    }
+}
 
 var apiModule = listOf(
     retrofit,
     trendAdapter,
     model,
-    giphyViewModel
+    giphyViewModel,
+    navigationViewModel
 )

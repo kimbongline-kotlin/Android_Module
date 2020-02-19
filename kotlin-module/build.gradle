@@ -121,4 +121,7 @@ dependencies {
     implementation 'gun0912.ted:tedpermission:2.1.1'
 
     implementation 'com.android.support:multidex:1.0.3'
+
+
+
 }
