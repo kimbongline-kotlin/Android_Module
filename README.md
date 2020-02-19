@@ -90,14 +90,59 @@ ex) instaTagView.add(10,10,'태그 제목','태그 내용')
 2. shortUrl : Firebase에서 주어진 xxx.page.link Url
 3. Title : 링크에 표시되는 Title 영역
 4. Info : 링크에 표시되는 Description 영역.
+5. Other : 링크에 표시되지 않지만, Get방식을 통해 데이터를 주고 받습니다.
 5. Image : 링크에 표시되는 Image영역
 
-	*선행작업
-	1. Project Gradle 에 classpath 'com.google.gms:google-services:4.3.3' dependencies 에 추가.
-	2. App Gradle 에 apply plugin: 'com.google.gms.google-services' 추가
-	3. implementation 'com.google.firebase:firebase-analytics:17.2.2’, implementation 'com.google.firebase:firebase-invites:17.0.0’. 추가. 버전에 맞게 추가하시면 됩니다.
-	4. 참고 url : https://firebase.google.com/docs/dynamic-links/android/receive?hl=ko
+	   선행작업
+	   1. Project Gradle 에 classpath 'com.google.gms:google-services:4.3.3' dependencies 에 추가.
+	   2. App Gradle 에 apply plugin: 'com.google.gms.google-services' 추가
+	   3. implementation 'com.google.firebase:firebase-analytics:17.2.2’, implementation 'com.google.firebase:firebase-        invites:17.0.0’. 추가. 버전에 맞게 추가하시면 됩니다.
+	   4. 참고 url : https://firebase.google.com/docs/dynamic-links/android/receive?hl=ko
+	   5. Manifests Launch Activity의 아래 내용을 추가합니다.
+	   <intent-filter>
+    		<action android:name="android.intent.action.VIEW" />
 
+    		<category android:name="android.intent.category.DEFAULT" />
+    		<category android:name="android.intent.category.BROWSABLE" />
+
+    		<data
+      			  android:host="target_url"
+      			  android:scheme="http" />
+    		<data
+       			 android:host=“target_url”
+      			  android:scheme="https" />
+		</intent-filter>
+
+
+	   DynamicLink 생성
+	   FirebaseShare.getDynamicUrl(targetUrl,shortUrl,title,info,other,image_url,ShareReturn)
+	   object : ShareReturn {
+                override fun onError(t: Throwable) {
+			
+                }
+
+                override fun onSuccess(url: String) {
+                    //링크가 정상적으로 생성됬을경우 url 값으로 반환됩니다.
+                } 
+	     }
+             
+	     DynamicLink 받기
+	     FirebaseDynamicLinks.getInstance().getDynamicLink(intent).addOnSuccessListener {
+    			if(it != null) {
+        				var url = it.link
+        				var return_data = url.getQueryParameter("item")
+        				dynamic_return_label.setText(return_data.toString())
+    			}
+               }
+
+# 6.MVVM, Retrofit2, Rx를 이용한 간단한 예제입니다.
+
+# 7.GoogleAPI와 SmartLocation 라이브러리를 이용한 간단한 네비게이션 예제입니다.
+ Ex) https://github.com/mrmans0n/smart-location-lib
+
+# 8.Firebase를 이용한 실시간 채팅 예제입니다. 
+
+             
 # 9.DisplayUtl
 - DP 값을 Pixcel로 혹은 Pixcel값을 DP로 변환하는 툴 입니다.
 
