@@ -70,5 +70,12 @@
             android:layout_marginBottom="15dp"
             android:text="Firebase를 이용한 실시간 채팅" />
 
+        <Button
+            android:id="@+id/BioBtn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="15dp"
+            android:text="바이오 인증" />
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

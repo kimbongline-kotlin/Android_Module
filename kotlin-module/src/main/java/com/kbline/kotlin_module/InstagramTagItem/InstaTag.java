@@ -85,6 +85,9 @@ public class InstaTag extends RelativeLayout {
         @Override
         public boolean onSingleTapConfirmed(MotionEvent e) {
             if (canWeAddTags) {
+
+
+
                 if (mIsRootIsInTouch) {
                     int x = (int) e.getX();
                     int y = (int) e.getY();

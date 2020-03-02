@@ -9,6 +9,7 @@ import android.util.Log
 import com.google.firebase.dynamiclinks.FirebaseDynamicLinks
 import com.gun0912.tedpermission.PermissionListener
 import com.gun0912.tedpermission.TedPermission
+import com.kbline.kotlin_module.Bio.BioActivity
 import com.kbline.kotlin_module.FirebaseDynamic.DynamicActivity
 import com.kbline.kotlin_module.GalleryUtil.KbPickerActivity
 import com.kbline.kotlin_module.GalleryUtil.KbPickerCall
@@ -119,6 +120,9 @@ class HomeActivity : AppCompatActivity() {
         }
 
         if(intent.action == Intent.ACTION_VIEW) {
+
+
+
             check_dynamic_link()
         }
 
@@ -126,6 +130,26 @@ class HomeActivity : AppCompatActivity() {
         HashKeyTool.printHashKey(applicationContext)
 
 
+        BioBtn.setOnClickListener {
+
+            TedPermission.with(this)
+                .setPermissionListener(object: PermissionListener {
+                    override fun onPermissionGranted() {
+
+                        startActivity(Intent(applicationContext,BioActivity::class.java))
+
+                    }
+
+                    override fun onPermissionDenied(deniedPermissions: ArrayList<String>?) {
+                        // ShowToast(resources.getString(com.raphacall.user.R.string.phonePermitErrorStr))
+                    }
+
+
+                })
+                .setPermissions(android.Manifest.permission.USE_BIOMETRIC) // 확인할 권한을 다중 인자로 넣어줍니다.
+                .check()
+
+        }
 
     }
 

@@ -17,7 +17,7 @@ class DynamicActivity : AppCompatActivity() {
 
         createBtn.setOnClickListener {
             FirebaseShare.getDynaicUrl(
-                "https://www.naver.com", // targetUrl ex)www.naver.com other...
+                "https://www.google.com", // targetUrl ex)www.naver.com other...
                 "kbline.page.link" , //
                 titleEdit.text.toString(), //title
                 infoEdit.text.toString(),  //description
@@ -41,5 +41,6 @@ class DynamicActivity : AppCompatActivity() {
         copyBtn.setOnClickListener {
             ClipboardUtil.copy(applicationContext,urlEdit.text.toString(),"'${urlEdit.text.toString()}' 이 복사되었습니다.")
         }
+
     }
 }
