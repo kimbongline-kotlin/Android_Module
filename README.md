@@ -202,3 +202,6 @@ ex) instaTagView.add(10,10,'태그 제목','태그 내용')
 - 디바이스의 고유 Id를 가져오는 툴입니다. 
 
          Uuid.get(context) -> String : 디바이스의 고유 Id를 가져옵니다.
+	 
+# 19.MPChart
+https://github.com/PhilJay/MPAndroidChart
